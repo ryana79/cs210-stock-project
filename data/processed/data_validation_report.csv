@@ -1,0 +1,9 @@
+check_name,rows_evaluated,rows_failed,action,description
+duplicate_ticker_date,6270,0,drop_duplicates,"Each (ticker, date) pair must be unique to satisfy the database UNIQUE constraint and prevent double-counting."
+negative_or_zero_prices,6270,0,drop_rows,Stock prices must be strictly positive; zero/negative prices indicate data corruption.
+null_required_values,6270,0,drop_rows,Rows missing any required price/volume/date are dropped.
+price_relationship_invariants,6270,0,drop_rows,"Within a trading day, open and close must lie within [low, high] and low <= high; any violation is impossible and indicates corruption."
+schema_required_columns_present,24,0,raise_if_missing,"All 8 required columns (date, OHLC, adj_close, volume, ticker) must be present; raises ValueError if not."
+zero_volume_days,6270,0,flag_only,Zero-volume days can indicate trading halts or data gaps; flagged for review but not dropped.
+extreme_daily_returns_gt_50pct,6267,0,flag_only,Single-day moves above 50% almost always indicate an unadjusted split or data error rather than a real return.
+date_gap_above_5_calendar_days,6267,0,flag_only,Calendar gaps > 5 days within a ticker may indicate missing trading-day records (excludes normal weekend/holiday gaps).

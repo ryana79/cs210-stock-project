@@ -1,0 +1,4 @@
+ticker,mean_close,median_close,std_close,min_close,max_close,mean_volume,median_volume,mean_daily_return_pct,std_daily_return_pct,skewness_daily_return,kurtosis_daily_return
+AAPL,142.36,148.07,69.2,35.55,286.19,92616127.0,78955300.0,0.1092,1.927,0.1535,6.3996
+MSFT,276.22,265.48,125.13,85.01,542.07,27992616.0,24949900.0,0.0968,1.7985,0.0008,7.031
+TSLA,191.12,209.08,131.02,11.93,489.88,121734167.0,100861950.0,0.2158,3.9631,0.2994,3.7817

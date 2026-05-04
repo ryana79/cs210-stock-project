@@ -1,0 +1,4 @@
+model,auc
+logistic_regression,0.4909
+decision_tree,0.5048
+random_forest,0.5006

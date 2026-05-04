@@ -1,0 +1,4 @@
+ticker,avg_close_price,min_close_price,max_close_price,avg_volume
+AAPL,142.36,35.55,286.19,92616127.16
+MSFT,276.22,85.01,542.07,27992616.16
+TSLA,191.12,11.93,489.88,121734167.35
